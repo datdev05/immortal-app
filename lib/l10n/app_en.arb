@@ -1,0 +1,23 @@
+{
+  "@@locale": "en",
+  "appName": "Immortal System",
+  "systemName": "The Strongest System",
+  "systemGreeting": "Greetings, fellow cultivator",
+  "systemIntroduction": "I am your personal System. From today onward, I will accompany you as you cultivate Essence, Energy, and Spirit and advance through each realm.",
+  "foundationReady": "Application foundation is ready",
+  "foundationDescription": "Sign-in and cultivation data will be connected to the System in the next step.",
+  "pillarTinh": "Essence",
+  "pillarKhi": "Energy",
+  "pillarThan": "Spirit",
+  "settings": "Settings",
+  "appearance": "Appearance",
+  "language": "Language",
+  "themeSystem": "Use device setting",
+  "themeLight": "Light",
+  "themeDark": "Dark",
+  "vietnamese": "Tiếng Việt",
+  "english": "English",
+  "retry": "Try again",
+  "unknownError": "Something went wrong. Please try again.",
+  "routeNotFound": "This screen could not be found."
+}

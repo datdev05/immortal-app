@@ -1,0 +1,23 @@
+{
+  "@@locale": "vi",
+  "appName": "Hệ Thống Tu Tiên",
+  "systemName": "Hệ Thống Mạnh Nhất",
+  "systemGreeting": "Kính chào đạo hữu",
+  "systemIntroduction": "Ta là Hệ Thống riêng của đạo hữu. Từ hôm nay, ta sẽ cùng đạo hữu rèn Tinh, luyện Khí, dưỡng Thần và từng bước đột phá cảnh giới.",
+  "foundationReady": "Nền tảng ứng dụng đã sẵn sàng",
+  "foundationDescription": "Đăng nhập và dữ liệu tu luyện sẽ được kết nối với Hệ Thống trong bước tiếp theo.",
+  "pillarTinh": "Tinh",
+  "pillarKhi": "Khí",
+  "pillarThan": "Thần",
+  "settings": "Thiết lập",
+  "appearance": "Giao diện",
+  "language": "Ngôn ngữ",
+  "themeSystem": "Theo thiết bị",
+  "themeLight": "Sáng",
+  "themeDark": "Tối",
+  "vietnamese": "Tiếng Việt",
+  "english": "English",
+  "retry": "Thử lại",
+  "unknownError": "Đã xảy ra lỗi. Vui lòng thử lại.",
+  "routeNotFound": "Không tìm thấy màn hình này."
+}
