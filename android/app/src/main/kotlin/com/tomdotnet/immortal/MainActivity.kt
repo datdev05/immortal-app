@@ -1,4 +1,4 @@
-package com.example.immortal_app
+package com.tomdotnet.immortal
 
 import io.flutter.embedding.android.FlutterActivity
 
