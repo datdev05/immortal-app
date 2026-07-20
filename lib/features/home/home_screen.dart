@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:immortal_app/l10n/app_localizations.dart';
 
 import '../../core/navigation/app_routes.dart';
 import '../../core/theme/app_colors.dart';
+import '../auth/auth_cubit.dart';
+import '../auth/auth_state.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -19,6 +22,11 @@ class HomeScreen extends StatelessWidget {
             onPressed: () => Navigator.pushNamed(context, AppRoutes.settings),
             icon: const Icon(Icons.settings_outlined),
           ),
+          IconButton(
+            tooltip: strings.signOut,
+            onPressed: () => context.read<AuthCubit>().signOut(),
+            icon: const Icon(Icons.logout),
+          ),
         ],
       ),
       body: SafeArea(
@@ -26,7 +34,12 @@ class HomeScreen extends StatelessWidget {
           padding: const EdgeInsets.fromLTRB(20, 16, 20, 32),
           children: [
             Text(
-              strings.systemGreeting,
+              context.select((AuthCubit cubit) {
+                final user = cubit.state.user;
+                return user == null || user.displayName.isEmpty
+                    ? strings.systemGreeting
+                    : strings.systemGreetingWithName(user.displayName);
+              }),
               style: Theme.of(
                 context,
               ).textTheme.headlineMedium?.copyWith(fontWeight: FontWeight.w700),
@@ -64,6 +77,25 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 28),
+            BlocBuilder<AuthCubit, AuthState>(
+              builder: (context, state) {
+                final user = state.user;
+                if (user == null) {
+                  return const SizedBox.shrink();
+                }
+                return Card(
+                  child: ListTile(
+                    leading: const Icon(
+                      Icons.person_outline,
+                      color: AppColors.jade,
+                    ),
+                    title: Text(user.email),
+                    subtitle: Text(strings.spiritualPower(user.spiritualPower)),
+                  ),
+                );
+              },
+            ),
+            const SizedBox(height: 14),
             Card(
               child: Padding(
                 padding: const EdgeInsets.all(20),

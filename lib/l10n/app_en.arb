@@ -3,12 +3,41 @@
   "appName": "Immortal System",
   "systemName": "The Strongest System",
   "systemGreeting": "Greetings, fellow cultivator",
+  "systemGreetingWithName": "Greetings, {name}",
+  "@systemGreetingWithName": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
   "systemIntroduction": "I am your personal System. From today onward, I will accompany you as you cultivate Essence, Energy, and Spirit and advance through each realm.",
   "foundationReady": "Application foundation is ready",
   "foundationDescription": "Sign-in and cultivation data will be connected to the System in the next step.",
   "pillarTinh": "Essence",
   "pillarKhi": "Energy",
   "pillarThan": "Spirit",
+  "loginTitle": "System Awakening",
+  "loginSubtitle": "Sign in to continue your cultivation journey with durable quests, progress, and realm records.",
+  "email": "Email",
+  "emailRequired": "Enter your email.",
+  "emailInvalid": "Enter a valid email.",
+  "password": "Password",
+  "passwordRequired": "Enter your password.",
+  "showPassword": "Show password",
+  "hidePassword": "Hide password",
+  "signIn": "Sign in",
+  "signingIn": "Signing in",
+  "signOut": "Sign out",
+  "loginFootnote": "Your session is stored securely on this device.",
+  "spiritualPower": "Spiritual power: {value}",
+  "@spiritualPower": {
+    "placeholders": {
+      "value": {
+        "type": "int"
+      }
+    }
+  },
   "settings": "Settings",
   "appearance": "Appearance",
   "language": "Language",

@@ -6,6 +6,8 @@ import '../core/network/api_client.dart';
 import '../core/notifications/notification_service.dart';
 import '../core/storage/preferences_store.dart';
 import '../core/storage/token_storage.dart';
+import '../features/auth/auth_cubit.dart';
+import '../features/auth/auth_repository.dart';
 import 'app.dart';
 import 'app_cubit.dart';
 
@@ -16,6 +18,10 @@ class AppBootstrap {
     final preferences = PreferencesStore(await SharedPreferences.getInstance());
     const tokenStorage = SecureTokenStorage();
     final apiClient = ApiClient(tokenStorage: tokenStorage);
+    final authRepository = AuthRepository(
+      apiClient: apiClient,
+      tokenStorage: tokenStorage,
+    );
     final notificationService = NotificationService();
     await notificationService.initialize();
 
@@ -24,12 +30,18 @@ class AppBootstrap {
         RepositoryProvider<PreferencesStore>.value(value: preferences),
         RepositoryProvider<TokenStorage>.value(value: tokenStorage),
         RepositoryProvider<ApiClient>.value(value: apiClient),
+        RepositoryProvider<AuthRepository>.value(value: authRepository),
         RepositoryProvider<NotificationService>.value(
           value: notificationService,
         ),
       ],
-      child: BlocProvider(
-        create: (_) => AppCubit(preferences)..restore(),
+      child: MultiBlocProvider(
+        providers: [
+          BlocProvider(create: (_) => AppCubit(preferences)..restore()),
+          BlocProvider(
+            create: (_) => AuthCubit(authRepository)..restoreSession(),
+          ),
+        ],
         child: const ImmortalApp(),
       ),
     );

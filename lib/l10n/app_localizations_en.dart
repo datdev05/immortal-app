@@ -18,6 +18,11 @@ class AppLocalizationsEn extends AppLocalizations {
   String get systemGreeting => 'Greetings, fellow cultivator';
 
   @override
+  String systemGreetingWithName(String name) {
+    return 'Greetings, $name';
+  }
+
+  @override
   String get systemIntroduction =>
       'I am your personal System. From today onward, I will accompany you as you cultivate Essence, Energy, and Spirit and advance through each realm.';
 
@@ -36,6 +41,51 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get pillarThan => 'Spirit';
+
+  @override
+  String get loginTitle => 'System Awakening';
+
+  @override
+  String get loginSubtitle =>
+      'Sign in to continue your cultivation journey with durable quests, progress, and realm records.';
+
+  @override
+  String get email => 'Email';
+
+  @override
+  String get emailRequired => 'Enter your email.';
+
+  @override
+  String get emailInvalid => 'Enter a valid email.';
+
+  @override
+  String get password => 'Password';
+
+  @override
+  String get passwordRequired => 'Enter your password.';
+
+  @override
+  String get showPassword => 'Show password';
+
+  @override
+  String get hidePassword => 'Hide password';
+
+  @override
+  String get signIn => 'Sign in';
+
+  @override
+  String get signingIn => 'Signing in';
+
+  @override
+  String get signOut => 'Sign out';
+
+  @override
+  String get loginFootnote => 'Your session is stored securely on this device.';
+
+  @override
+  String spiritualPower(int value) {
+    return 'Spiritual power: $value';
+  }
 
   @override
   String get settings => 'Settings';

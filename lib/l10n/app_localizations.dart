@@ -116,6 +116,12 @@ abstract class AppLocalizations {
   /// **'Kính chào đạo hữu'**
   String get systemGreeting;
 
+  /// No description provided for @systemGreetingWithName.
+  ///
+  /// In vi, this message translates to:
+  /// **'Kính chào {name}'**
+  String systemGreetingWithName(String name);
+
   /// No description provided for @systemIntroduction.
   ///
   /// In vi, this message translates to:
@@ -151,6 +157,90 @@ abstract class AppLocalizations {
   /// In vi, this message translates to:
   /// **'Thần'**
   String get pillarThan;
+
+  /// No description provided for @loginTitle.
+  ///
+  /// In vi, this message translates to:
+  /// **'Hệ Thống Thức Tỉnh'**
+  String get loginTitle;
+
+  /// No description provided for @loginSubtitle.
+  ///
+  /// In vi, this message translates to:
+  /// **'Đăng nhập để tiếp tục hành trình tu luyện với nhiệm vụ, tiến độ và cảnh giới được lưu bền vững.'**
+  String get loginSubtitle;
+
+  /// No description provided for @email.
+  ///
+  /// In vi, this message translates to:
+  /// **'Email'**
+  String get email;
+
+  /// No description provided for @emailRequired.
+  ///
+  /// In vi, this message translates to:
+  /// **'Vui lòng nhập email.'**
+  String get emailRequired;
+
+  /// No description provided for @emailInvalid.
+  ///
+  /// In vi, this message translates to:
+  /// **'Email chưa hợp lệ.'**
+  String get emailInvalid;
+
+  /// No description provided for @password.
+  ///
+  /// In vi, this message translates to:
+  /// **'Mật khẩu'**
+  String get password;
+
+  /// No description provided for @passwordRequired.
+  ///
+  /// In vi, this message translates to:
+  /// **'Vui lòng nhập mật khẩu.'**
+  String get passwordRequired;
+
+  /// No description provided for @showPassword.
+  ///
+  /// In vi, this message translates to:
+  /// **'Hiện mật khẩu'**
+  String get showPassword;
+
+  /// No description provided for @hidePassword.
+  ///
+  /// In vi, this message translates to:
+  /// **'Ẩn mật khẩu'**
+  String get hidePassword;
+
+  /// No description provided for @signIn.
+  ///
+  /// In vi, this message translates to:
+  /// **'Đăng nhập'**
+  String get signIn;
+
+  /// No description provided for @signingIn.
+  ///
+  /// In vi, this message translates to:
+  /// **'Đang đăng nhập'**
+  String get signingIn;
+
+  /// No description provided for @signOut.
+  ///
+  /// In vi, this message translates to:
+  /// **'Đăng xuất'**
+  String get signOut;
+
+  /// No description provided for @loginFootnote.
+  ///
+  /// In vi, this message translates to:
+  /// **'Phiên đăng nhập được lưu an toàn trên thiết bị này.'**
+  String get loginFootnote;
+
+  /// No description provided for @spiritualPower.
+  ///
+  /// In vi, this message translates to:
+  /// **'Linh lực: {value}'**
+  String spiritualPower(int value);
 
   /// No description provided for @settings.
   ///

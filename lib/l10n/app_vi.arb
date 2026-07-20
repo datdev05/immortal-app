@@ -3,12 +3,41 @@
   "appName": "Hệ Thống Tu Tiên",
   "systemName": "Hệ Thống Mạnh Nhất",
   "systemGreeting": "Kính chào đạo hữu",
+  "systemGreetingWithName": "Kính chào {name}",
+  "@systemGreetingWithName": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
   "systemIntroduction": "Ta là Hệ Thống riêng của đạo hữu. Từ hôm nay, ta sẽ cùng đạo hữu rèn Tinh, luyện Khí, dưỡng Thần và từng bước đột phá cảnh giới.",
   "foundationReady": "Nền tảng ứng dụng đã sẵn sàng",
   "foundationDescription": "Đăng nhập và dữ liệu tu luyện sẽ được kết nối với Hệ Thống trong bước tiếp theo.",
   "pillarTinh": "Tinh",
   "pillarKhi": "Khí",
   "pillarThan": "Thần",
+  "loginTitle": "Hệ Thống Thức Tỉnh",
+  "loginSubtitle": "Đăng nhập để tiếp tục hành trình tu luyện với nhiệm vụ, tiến độ và cảnh giới được lưu bền vững.",
+  "email": "Email",
+  "emailRequired": "Vui lòng nhập email.",
+  "emailInvalid": "Email chưa hợp lệ.",
+  "password": "Mật khẩu",
+  "passwordRequired": "Vui lòng nhập mật khẩu.",
+  "showPassword": "Hiện mật khẩu",
+  "hidePassword": "Ẩn mật khẩu",
+  "signIn": "Đăng nhập",
+  "signingIn": "Đang đăng nhập",
+  "signOut": "Đăng xuất",
+  "loginFootnote": "Phiên đăng nhập được lưu an toàn trên thiết bị này.",
+  "spiritualPower": "Linh lực: {value}",
+  "@spiritualPower": {
+    "placeholders": {
+      "value": {
+        "type": "int"
+      }
+    }
+  },
   "settings": "Thiết lập",
   "appearance": "Giao diện",
   "language": "Ngôn ngữ",
