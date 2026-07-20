@@ -77,6 +77,13 @@ class AppLocalizationsEn extends AppLocalizations {
   String get signingIn => 'Signing in';
 
   @override
+  String get loginInvalidCredentials => 'Email or password is incorrect.';
+
+  @override
+  String get loginServiceUnavailable =>
+      'The System is temporarily unavailable. Please try again soon.';
+
+  @override
   String get signOut => 'Sign out';
 
   @override

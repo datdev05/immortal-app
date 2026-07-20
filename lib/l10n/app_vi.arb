@@ -28,6 +28,8 @@
   "hidePassword": "Ẩn mật khẩu",
   "signIn": "Đăng nhập",
   "signingIn": "Đang đăng nhập",
+  "loginInvalidCredentials": "Email hoặc mật khẩu chưa đúng.",
+  "loginServiceUnavailable": "Hệ Thống đang tạm gián đoạn. Đạo hữu vui lòng thử lại sau.",
   "signOut": "Đăng xuất",
   "loginFootnote": "Phiên đăng nhập được lưu an toàn trên thiết bị này.",
   "spiritualPower": "Linh lực: {value}",

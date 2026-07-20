@@ -224,6 +224,18 @@ abstract class AppLocalizations {
   /// **'Đang đăng nhập'**
   String get signingIn;
 
+  /// No description provided for @loginInvalidCredentials.
+  ///
+  /// In vi, this message translates to:
+  /// **'Email hoặc mật khẩu chưa đúng.'**
+  String get loginInvalidCredentials;
+
+  /// No description provided for @loginServiceUnavailable.
+  ///
+  /// In vi, this message translates to:
+  /// **'Hệ Thống đang tạm gián đoạn. Đạo hữu vui lòng thử lại sau.'**
+  String get loginServiceUnavailable;
+
   /// No description provided for @signOut.
   ///
   /// In vi, this message translates to:

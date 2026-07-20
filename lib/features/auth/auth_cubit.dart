@@ -33,7 +33,9 @@ class AuthCubit extends Cubit<AuthState> {
       emit(
         state.copyWith(
           status: AuthStatus.unauthenticated,
-          errorMessage: error.message,
+          errorCode: error.statusCode == 401
+              ? 'invalid_credentials'
+              : 'service_unavailable',
           isSubmitting: false,
         ),
       );
@@ -41,7 +43,7 @@ class AuthCubit extends Cubit<AuthState> {
       emit(
         state.copyWith(
           status: AuthStatus.unauthenticated,
-          errorMessage: null,
+          errorCode: 'unknown',
           isSubmitting: false,
         ),
       );

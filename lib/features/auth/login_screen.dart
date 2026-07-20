@@ -120,10 +120,10 @@ class _LoginScreenState extends State<LoginScreen> {
                             return null;
                           },
                         ),
-                        if (state.errorMessage != null) ...[
+                        if (state.errorCode != null) ...[
                           const SizedBox(height: 14),
                           Text(
-                            state.errorMessage!,
+                            _loginErrorMessage(strings, state.errorCode!),
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Theme.of(context).colorScheme.error,
@@ -174,5 +174,13 @@ class _LoginScreenState extends State<LoginScreen> {
       email: _emailController.text.trim(),
       password: _passwordController.text,
     );
+  }
+
+  String _loginErrorMessage(AppLocalizations strings, String code) {
+    return switch (code) {
+      'invalid_credentials' => strings.loginInvalidCredentials,
+      'service_unavailable' => strings.loginServiceUnavailable,
+      _ => strings.unknownError,
+    };
   }
 }

@@ -8,19 +8,19 @@ class AuthState extends Equatable {
   const AuthState({
     this.status = AuthStatus.checking,
     this.user,
-    this.errorMessage,
+    this.errorCode,
     this.isSubmitting = false,
   });
 
   final AuthStatus status;
   final UserProfile? user;
-  final String? errorMessage;
+  final String? errorCode;
   final bool isSubmitting;
 
   AuthState copyWith({
     AuthStatus? status,
     UserProfile? user,
-    String? errorMessage,
+    String? errorCode,
     bool? isSubmitting,
     bool clearUser = false,
     bool clearError = false,
@@ -28,11 +28,11 @@ class AuthState extends Equatable {
     return AuthState(
       status: status ?? this.status,
       user: clearUser ? null : user ?? this.user,
-      errorMessage: clearError ? null : errorMessage ?? this.errorMessage,
+      errorCode: clearError ? null : errorCode ?? this.errorCode,
       isSubmitting: isSubmitting ?? this.isSubmitting,
     );
   }
 
   @override
-  List<Object?> get props => [status, user, errorMessage, isSubmitting];
+  List<Object?> get props => [status, user, errorCode, isSubmitting];
 }

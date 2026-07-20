@@ -28,6 +28,8 @@
   "hidePassword": "Hide password",
   "signIn": "Sign in",
   "signingIn": "Signing in",
+  "loginInvalidCredentials": "Email or password is incorrect.",
+  "loginServiceUnavailable": "The System is temporarily unavailable. Please try again soon.",
   "signOut": "Sign out",
   "loginFootnote": "Your session is stored securely on this device.",
   "spiritualPower": "Spiritual power: {value}",

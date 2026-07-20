@@ -77,6 +77,13 @@ class AppLocalizationsVi extends AppLocalizations {
   String get signingIn => 'Đang đăng nhập';
 
   @override
+  String get loginInvalidCredentials => 'Email hoặc mật khẩu chưa đúng.';
+
+  @override
+  String get loginServiceUnavailable =>
+      'Hệ Thống đang tạm gián đoạn. Đạo hữu vui lòng thử lại sau.';
+
+  @override
   String get signOut => 'Đăng xuất';
 
   @override
