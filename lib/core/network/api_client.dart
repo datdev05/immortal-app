@@ -32,14 +32,32 @@ class ApiClient {
   }) async {
     return _request(
       () => _dio.get<Map<String, dynamic>>(
-        path,
+        _gatewayPath(path),
         queryParameters: queryParameters,
       ),
     );
   }
 
   Future<Map<String, dynamic>> post(String path, {Object? data}) async {
-    return _request(() => _dio.post<Map<String, dynamic>>(path, data: data));
+    return _request(
+      () => _dio.post<Map<String, dynamic>>(_gatewayPath(path), data: data),
+    );
+  }
+
+  String _gatewayPath(String path) {
+    final prefix = _normalizePrefix(AppConfig.apiRoutePrefix);
+    final servicePath = path.startsWith('/') ? path : '/$path';
+    if (prefix.isEmpty) return servicePath;
+    final gatewayPath = servicePath.replaceFirst(RegExp(r'^/api(?=/)'), '');
+    return '$prefix$gatewayPath';
+  }
+
+  String _normalizePrefix(String prefix) {
+    if (prefix.isEmpty || prefix == '/') return '';
+    final withSlash = prefix.startsWith('/') ? prefix : '/$prefix';
+    return withSlash.endsWith('/')
+        ? withSlash.substring(0, withSlash.length - 1)
+        : withSlash;
   }
 
   Future<Map<String, dynamic>> _request(

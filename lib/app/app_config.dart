@@ -3,7 +3,11 @@ class AppConfig {
 
   static const apiBaseUrl = String.fromEnvironment(
     'API_BASE_URL',
-    defaultValue: 'http://localhost:5014',
+    defaultValue: 'https://api-immortal.tomdotnet.com',
+  );
+  static const apiRoutePrefix = String.fromEnvironment(
+    'API_ROUTE_PREFIX',
+    defaultValue: '/api/immortal',
   );
 
   static const defaultLocale = 'vi';

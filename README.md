@@ -25,14 +25,24 @@ by the backend.
 
 ## Run
 
-The API defaults to `http://localhost:5014`. Override it per environment:
+The API defaults to the deployed gateway at `https://api-immortal.tomdotnet.com`
+with route prefix `/api/immortal`. Override it per environment:
 
 ```sh
-flutter run --dart-define=API_BASE_URL=https://api.example.com
+flutter run \
+  --dart-define=API_BASE_URL=https://api.example.com \
+  --dart-define=API_ROUTE_PREFIX=/api/immortal
 ```
 
 For an Android emulator, use an address reachable from the emulator rather
-than host `localhost` (commonly `http://10.0.2.2:5014`).
+than host `localhost` and leave `API_ROUTE_PREFIX` empty for direct service
+calls:
+
+```sh
+flutter run \
+  --dart-define=API_BASE_URL=http://10.0.2.2:5014 \
+  --dart-define=API_ROUTE_PREFIX=
+```
 
 Quality checks:
 
